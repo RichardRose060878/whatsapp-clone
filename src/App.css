@@ -1,38 +1,41 @@
-.App {
-  text-align: center;
+.app {
+  display: grid;
+  place-items: center; /* will place element vertically and horizontally */
+  background-color: #dadbd3;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app__body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #ededed;
+  margin: -50px;
+  height: 90vh;
+  width: 90vw;
+  box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.7);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* For landscape layouts only */
+  .app__body {
+    height: 95vh;
+    width: 100vw;
+    margin: 0px;
   }
-  to {
-    transform: rotate(360deg);
+  .app {
+    display: grid;
+    place-items: center;
+    height: 0;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* For portrait layouts only */
+  .app__body {
+    height: 95vh;
+    width: 100vw;
+    margin: 0px;
+  }
+  .app {
+    height: 0;
   }
 }
